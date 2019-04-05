@@ -20,15 +20,21 @@ namespace BigSchool.Controllers
 
         // GET: Courses
         [Authorize]
-        [HttpPost]
-        public ActionResult Create(CourseViewModel viewModel)
+        public ActionResult Create()
         {
-            /*var viewModel = new CourseViewModel
+            var viewModel = new CourseViewModel
             {
                 Categoties = _dbContext.Categories.ToList()
-             };
-            return View(viewModel);*/
+            };
+        return View(viewModel);
+        }
 
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CourseViewModel viewModel)
+        {
             if(!ModelState.IsValid)
             {
                 viewModel.Categoties = _dbContext.Categories.ToList();
