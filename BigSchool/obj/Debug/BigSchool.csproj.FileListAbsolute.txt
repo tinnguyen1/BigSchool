@@ -84,3 +84,10 @@ c:\users\administrator\documents\visual studio 2015\Projects\BigSchool\BigSchool
 c:\users\administrator\documents\visual studio 2015\Projects\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.GenerateResource.Cache
 c:\users\administrator\documents\visual studio 2015\Projects\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.CreateTableCourse.resources
 c:\users\administrator\documents\visual studio 2015\Projects\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.PopulateCategoryTable.resources
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.InitialModel.resources
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.CreateTableCourse.resources
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.PopulateCategoryTable.resources
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.GenerateResource.Cache
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.dll
+C:\Users\Administrator\Source\Repos\BigSchool\BigSchool\obj\Debug\BigSchool.pdb
