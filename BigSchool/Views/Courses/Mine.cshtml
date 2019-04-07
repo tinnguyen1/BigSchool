@@ -28,8 +28,35 @@
             </div>
             <div class="action">
                 <a href="@Url.Action("Edit", "Courses", new { id = course.Id})">Edit</a> |
-                <a href="">Delete</a>
+                <a href="#" class="js-cancel-course" data-course-id="@course.Id">Cancel</a>
             </div>
         </li>
     }
 </ul>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".js-cancel-course").click(function (e) {
+                e.preventDefault();
+                var link = $(e.target);
+                bootbox.confirm("Are you sure to cancel ?",
+                    function () {
+                        $.ajax({
+                            url: "/api/courses/" + link.attr("data-course-id"),
+                            method: "DELETE"
+                        })
+                            .done(function () {
+                                link.parents("li").fadeOut(function () {
+                                    $(this).remove();
+                                });
+                            })
+                            .fail(function () {
+                                alert("Something failed!");
+                            });
+                    });
+            });
+        });
+    </script>
+}

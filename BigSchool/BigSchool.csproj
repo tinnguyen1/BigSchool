@@ -207,6 +207,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\CoursesController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
@@ -241,6 +242,10 @@
     <Compile Include="Migrations\201904061056347_AddFollowingsTable.Designer.cs">
       <DependentUpon>201904061056347_AddFollowingsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904070218335_AddIsCanceledColumnToCourse.cs" />
+    <Compile Include="Migrations\201904070218335_AddIsCanceledColumnToCourse.Designer.cs">
+      <DependentUpon>201904070218335_AddIsCanceledColumnToCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -263,6 +268,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\add\coursesController.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904061056347_AddFollowingsTable.resx">
       <DependentUpon>201904061056347_AddFollowingsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070218335_AddIsCanceledColumnToCourse.resx">
+      <DependentUpon>201904070218335_AddIsCanceledColumnToCourse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

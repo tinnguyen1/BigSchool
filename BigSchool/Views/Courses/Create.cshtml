@@ -5,9 +5,10 @@
 }
 
 <h2>Create</h2>
-    @using (Html.BeginForm("Create", "Courses"))
+    @using (Html.BeginForm(Model.Action, "Courses"))
     {
         @Html.AntiForgeryToken() //Phòng chống lỗi  tấn công Cross site request forgery-csrf
+        @Html.HiddenFor(m=>m.Id)
 
         <div class="form-group">
             @Html.LabelFor(m => m.Place)

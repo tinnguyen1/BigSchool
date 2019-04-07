@@ -284,3 +284,4 @@ C:\Users\Asus\Desktop\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.CopyComplet
 C:\Users\Asus\Desktop\BigSchool\BigSchool\obj\Debug\BigSchool.dll
 C:\Users\Asus\Desktop\BigSchool\BigSchool\obj\Debug\BigSchool.pdb
 C:\Users\Asus\Desktop\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.AddFollowingsTable.resources
+C:\Users\Asus\Desktop\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.AddIsCanceledColumnToCourse.resources
