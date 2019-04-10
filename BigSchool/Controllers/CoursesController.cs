@@ -55,6 +55,7 @@ namespace BigSchool.Controllers
             return RedirectToAction("Index","Home");
         }
 
+        [Authorize]
         public ActionResult Attending()
         {
             var userId = User.Identity.GetUserId();

@@ -41,37 +41,7 @@
         <script>
             $(document).ready(function () {
                 CoursesController.init();
-              /*
-                $(".js-toggle-attendance").click(function (e) {
-                    var button = $(e.target);
-                    if (button.hasClass("btn-default")) {
-                        $.post("/api/attendances", { courseId: button.attr("data-course-id") })
-                            .done(function () {
-                                button
-                                    .removeClass("btn-default")
-                                    .addClass("btn-info")
-                                    .text("Going");
-                            })
-                            .fail(function () {
-                                alert("Something failed!");
-                            });
-                    }
-                    else {
-                        $.ajax({
-                            url: "/api/attendances/" + button.attr("data-course-id"),
-                        })
-                            .done(function () {
-                                button
-                                    .removeClass("btn-info")
-                                    .addClass("btn-default")
-                                    .text("Going?");
-                            })
-                            .fail(function () {
-                                alert("Something failed");
-                            });
-                    }
-                });
-                */
+
                 $(".js-toggle-follow").click(function (e) {
                     var button = $(e.target);
                     $.post("/api/followings", { followeeId: button.attr("data-user-id") })
@@ -83,6 +53,39 @@
                         });
                 });
             });
+             /*
+        $(".js-toggle-attendance").click(function (e) {
+        var button = $(e.target);
+        if (button.hasClass("btn-default")) {
+        $.post("/api/attendances", { courseId: button.attr("data-course-id") })
+        .done(function () {
+        button
+        .removeClass("btn-default")
+        .addClass("btn-info")
+        .text("Going");
+        })
+        .fail(function () {
+        alert("Something failed!");
+        });
+        }
+        else {
+        $.ajax({
+        url: "/api/attendances/" + button.attr("data-course-id"),
+        })
+        .done(function () {
+        button
+        .removeClass("btn-info")
+        .addClass("btn-default")
+        .text("Going?");
+        })
+        .fail(function () {
+        alert("Something failed");
+        });
+        }
+        });
+        */
         </script>
+       
     }
+
 </div>
