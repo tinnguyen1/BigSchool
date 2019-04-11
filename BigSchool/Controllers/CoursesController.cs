@@ -81,13 +81,28 @@ namespace BigSchool.Controllers
         {
             var userId = User.Identity.GetUserId();
             var courses = _dbContext.Courses
-                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now)
+                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now )
                 .Include(l => l.Lecturer)
                 .Include(c => c.Category)
                 .ToList();
 
             return View(courses);
         }
+
+        //thử nghiệm following
+        [Authorize]
+        public ActionResult Following()
+        {
+            var userId = User.Identity.GetUserId();
+
+            var courses = _dbContext.Followings
+                .Where(a => a.FollowerId == userId)
+                .Select(a => a.Followee)
+                .ToList();
+
+            return View(courses);
+        }
+
         [Authorize]
         public ActionResult Edit(int id)
         {
