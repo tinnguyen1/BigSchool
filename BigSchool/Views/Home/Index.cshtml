@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
+@using Microsoft.AspNet.Identity
+@using BigSchool.Models
 <div class="row">
     <ul class="course">
         @foreach (var course in Model.UpcommingCourses)
@@ -29,8 +30,21 @@
                         @course.Category.Name
                     </span>
                     @if (Model.ShowAction)
-                    {
+                            {
+                                var useId = User.Identity.GetUserId();
+                                ApplicationDbContext _dbContext = new ApplicationDbContext();
+                                bool isGoing = _dbContext.Attendances.Any(a => a.CourseId == course.Id && a.AttendeeId == useId);
+                    <div>
+                        @if (!isGoing)
+                        {
                         <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                        }
+                        else
+                        {
+                            <span class="text-danger">Đa tham gia!!</span>
+                        }
+                    </div>
+               
                     }
                 </div>
             </li>
